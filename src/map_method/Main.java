@@ -11,8 +11,14 @@ public class Main {
 		map.put("b", "Banana");
 		
 		//getメソッド Mapから値を取り出す
-		System.out.println(map.get("a"));
-		System.out.println(map.get("c"));
+//		System.out.println(map.get("a"));
+//		System.out.println(map.get("c"));
 		//指定されたキーがMapに登録されていない場合はnullが返る
+		
+		
+		//getOrDefaultメソッド
+		//キーに対応する値がない場合のデフォルト値を指定してMapから値を取得
+		System.out.println(map.getOrDefault("a", "Anime"));
+		System.out.println(map.getOrDefault("c", "Cartoon"));
 	}
 }
