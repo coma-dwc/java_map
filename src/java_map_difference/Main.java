@@ -3,6 +3,7 @@ package java_map_difference;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 //public class Main {
 //	private static void testMap(Map<String, String> map) {
@@ -32,7 +33,9 @@ import java.util.Map;
 
 //独自クラスをキーに使う
 //Stringをラップする独自クラスMyKeyを定義してそれをMapのキーとして使用
-class MyKey {
+
+//MyKeyクラスにComparableインターフェースを実装
+class MyKey implements Comparable<MyKey> {
 	
 	private String key;
 	
@@ -62,6 +65,10 @@ class MyKey {
 	public boolean equals(Object obj) {
 		return obj instanceof MyKey && this.key.equals(((MyKey)obj).key);
 	}
+	
+	public int compareTo(MyKey o) {
+		return this.key.compareTo(o.getKey());
+	}
 
 }
 
@@ -85,8 +92,7 @@ public class Main {
 	public static void main(String[] args) {
 		testMap(new HashMap<MyKey, String>());
 		testMap(new LinkedHashMap<MyKey, String>());
-		//TreeKeyではまだエラーになるので、コメントアウト
-//		testMap(new TreeMap<MyKey, String>());
+		testMap(new TreeMap<MyKey, String>());
 	}
 	
 	//HashMapとLinkedHashMapで、同じMyKeyのインスタンスを使用している場合は、getで値が取得できているが、
