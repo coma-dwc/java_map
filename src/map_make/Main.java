@@ -1,14 +1,16 @@
 package map_make;
 
-//import java.util.HashMap;
-//import java.util.Map;
-//
-//public class Main {
-//	public static void main(String[] args) {
-//		Map<String, String> map = new HashMap<>();
-//		System.out.println(map);
-//	}
-//}
+//HashMapの作成
+//Mapとプリミティブ型(整数(int = Integer)をキーとするMapを作成)
+import java.util.HashMap;
+import java.util.Map;
+
+public class Main {
+	public static void main(String[] args) {
+		Map<Integer, String> map = new HashMap<>();
+		System.out.println(map);
+	}
+}
 
 
 //TreeMapの作成;
@@ -24,12 +26,12 @@ package map_make;
 
 
 //LinkedHashMapの作成
-import java.util.LinkedHashMap;
-import java.util.Map;
-
-public class Main {
-	public static void main(String[] args) {
-		Map<String, String> map = new LinkedHashMap<>();
-		System.out.println(map);
-	}
-}
+//import java.util.LinkedHashMap;
+//import java.util.Map;
+//
+//public class Main {
+//	public static void main(String[] args) {
+//		Map<String, String> map = new LinkedHashMap<>();
+//		System.out.println(map);
+//	}
+//}
