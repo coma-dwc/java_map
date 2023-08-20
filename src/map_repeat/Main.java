@@ -16,7 +16,19 @@ public class Main {
 		
 		//キーを繰り返し処理
 		//Mapのキーを全て出力
-		Iterator<String> it = map.keySet(). iterator();
+//		Iterator<String> it = map.keySet(). iterator();
+//		while(it.hasNext()) {
+//			String key = it.next();
+//			System.out.println(key);
+//		}
+		
+		
+		//Mapの値を繰り返し処理
+		//Mapの値を全て出力
+		//Mapのキーだけをコレクションとして取得：values()メソッド
+		//そのkeySetからiterator()を取得することで繰り返し処理を行う
+		//Iteratorの処理：hasNext()とnext()の組み合わせ
+		Iterator<String> it = map.values().iterator();
 		while(it.hasNext()) {
 			String key = it.next();
 			System.out.println(key);
