@@ -40,11 +40,18 @@ public class Main {
 		
 		//putAllメソッド
 		//Mapに別のMapの内容を全て追加
-		Map<String, String> map2 = new HashMap<String, String>();
-		map2.put("c", "Cherry");
-		map2.put("d", "Donut");
+//		Map<String, String> map2 = new HashMap<String, String>();
+//		map2.put("c", "Cherry");
+//		map2.put("d", "Donut");
+//		
+//		map.putAll(map2);
+//		System.out.println(map);
 		
-		map.putAll(map2);
+		
+		//putIfAbsentメソッド
+		//Mapにキーに対応する値がない場合だけ値を追加
+		map.putIfAbsent("a", "Almond");
+		map.putIfAbsent("c", "Cherry");
 		System.out.println(map);
 	}
 }
