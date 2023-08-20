@@ -3,7 +3,6 @@ package java_map_difference;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 //public class Main {
 //	private static void testMap(Map<String, String> map) {
@@ -45,10 +44,25 @@ class MyKey {
 		return this.key;
 	}
 	
+	
 	@Override
 	public String toString() {
 		return this.key;
 	}
+	
+	//HashMapでキーとして使えるようにする
+	//MyKeyクラスにint hashCodeメソッドを定義
+	@Override
+	public int hashCode() {
+		return this.key.hashCode();
+	}
+	
+	///MyKeyクラスにboolean equalsメソッドを定義
+	@Override
+	public boolean equals(Object obj) {
+		return obj instanceof MyKey && this.key.equals(((MyKey)obj).key);
+	}
+
 }
 
 public class Main {
@@ -71,7 +85,8 @@ public class Main {
 	public static void main(String[] args) {
 		testMap(new HashMap<MyKey, String>());
 		testMap(new LinkedHashMap<MyKey, String>());
-		testMap(new TreeMap<MyKey, String>());
+		//TreeKeyではまだエラーになるので、コメントアウト
+//		testMap(new TreeMap<MyKey, String>());
 	}
 	
 	//HashMapとLinkedHashMapで、同じMyKeyのインスタンスを使用している場合は、getで値が取得できているが、
