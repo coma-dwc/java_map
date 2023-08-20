@@ -24,6 +24,12 @@ public class Main {
 		
 		//sizeメソッド
 		//Mapに登録されているキーと値のペアの数を取得
-		System.out.println(map.size());
+//		System.out.println(map.size());
+		
+		
+		//containsKeyメソッド
+		//Mapに指定のキーが登録されているかどうかを取得
+		System.out.println(map.containsKey("a"));
+		System.out.println(map.containsKey("c"));
 	}
 }
