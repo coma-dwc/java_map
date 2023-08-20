@@ -44,8 +44,14 @@ public class Main {
 		
 		
 		//for文を使ってキーと値を繰り返し処理
-		for(Map.Entry<String, String> entry : map.entrySet()) {
-			System.out.println(entry.getKey() + " = " + entry.getValue());
-		}
+//		for(Map.Entry<String, String> entry : map.entrySet()) {
+//			System.out.println(entry.getKey() + " = " + entry.getValue());
+//		}
+		
+		
+		//forEachを使ってキーと値を繰り返し処理
+		map.forEach((key, value) -> {
+			System.out.println(key + " = " + value);
+		});
 	}
 }
