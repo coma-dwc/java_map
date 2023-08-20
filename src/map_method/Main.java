@@ -9,6 +9,10 @@ public class Main {
 		Map<String, String> map = new HashMap<>();
 		map.put("a", "Apple");
 		map.put("b", "Banana");
-		System.out.println(map);
+		
+		//getメソッド Mapから値を取り出す
+		System.out.println(map.get("a"));
+		System.out.println(map.get("c"));
+		//指定されたキーがMapに登録されていない場合はnullが返る
 	}
 }
