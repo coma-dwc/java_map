@@ -50,8 +50,14 @@ public class Main {
 		
 		//putIfAbsentメソッド
 		//Mapにキーに対応する値がない場合だけ値を追加
-		map.putIfAbsent("a", "Almond");
-		map.putIfAbsent("c", "Cherry");
+//		map.putIfAbsent("a", "Almond");
+//		map.putIfAbsent("c", "Cherry");
+//		System.out.println(map);
+		
+		
+		//remove(key)メソッド
+		//Mapから値を削除
+		map.remove("a");
 		System.out.println(map);
 	}
 }
