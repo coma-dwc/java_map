@@ -34,7 +34,17 @@ public class Main {
 		
 		
 		//containsValueメソッド
-		System.out.println(map.containsValue("Apple"));
-		System.out.println(map.containsValue("Cherry"));
+//		System.out.println(map.containsValue("Apple"));
+//		System.out.println(map.containsValue("Cherry"));
+		
+		
+		//putAllメソッド
+		//Mapに別のMapの内容を全て追加
+		Map<String, String> map2 = new HashMap<String, String>();
+		map2.put("c", "Cherry");
+		map2.put("d", "Donut");
+		
+		map.putAll(map2);
+		System.out.println(map);
 	}
 }
