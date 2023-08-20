@@ -29,7 +29,12 @@ public class Main {
 		
 		//containsKeyメソッド
 		//Mapに指定のキーが登録されているかどうかを取得
-		System.out.println(map.containsKey("a"));
-		System.out.println(map.containsKey("c"));
+//		System.out.println(map.containsKey("a"));
+//		System.out.println(map.containsKey("c"));
+		
+		
+		//containsValueメソッド
+		System.out.println(map.containsValue("Apple"));
+		System.out.println(map.containsValue("Cherry"));
 	}
 }
