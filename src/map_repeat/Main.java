@@ -1,7 +1,6 @@
 package map_repeat;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class Main {
@@ -37,9 +36,15 @@ public class Main {
 		
 		//Mapのキーと値を繰り返し処理
 		//entrySet()メソッド
-		Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
-		while(it.hasNext()) {
-			Map.Entry<String, String> entry = it.next();
+//		Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
+//		while(it.hasNext()) {
+//			Map.Entry<String, String> entry = it.next();
+//			System.out.println(entry.getKey() + " = " + entry.getValue());
+//		}
+		
+		
+		//for文を使ってキーと値を繰り返し処理
+		for(Map.Entry<String, String> entry : map.entrySet()) {
 			System.out.println(entry.getKey() + " = " + entry.getValue());
 		}
 	}
