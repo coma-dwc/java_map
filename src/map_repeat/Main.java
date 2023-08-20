@@ -28,10 +28,19 @@ public class Main {
 		//Mapのキーだけをコレクションとして取得：values()メソッド
 		//そのkeySetからiterator()を取得することで繰り返し処理を行う
 		//Iteratorの処理：hasNext()とnext()の組み合わせ
-		Iterator<String> it = map.values().iterator();
+//		Iterator<String> it = map.values().iterator();
+//		while(it.hasNext()) {
+//			String key = it.next();
+//			System.out.println(key);
+//		}
+		
+		
+		//Mapのキーと値を繰り返し処理
+		//entrySet()メソッド
+		Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
 		while(it.hasNext()) {
-			String key = it.next();
-			System.out.println(key);
+			Map.Entry<String, String> entry = it.next();
+			System.out.println(entry.getKey() + " = " + entry.getValue());
 		}
 	}
 }
