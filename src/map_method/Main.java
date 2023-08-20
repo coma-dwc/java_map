@@ -63,8 +63,14 @@ public class Main {
 		
 		//remove(key, value)メソッド
 		//Mapからキーに対応する値が指定の値の場合のみ削除
-		map.remove("a", "Almond");
-		map.remove("b", "Banana");
+//		map.remove("a", "Almond");
+//		map.remove("b", "Banana");
+//		System.out.println(map);
+		
+		
+		//clearメソッド
+		//Mapをクリアする
+		map.clear();
 		System.out.println(map);
 	}
 }
