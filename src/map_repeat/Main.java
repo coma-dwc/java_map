@@ -13,6 +13,9 @@ public class Main {
 		map.put("d", "Donut");
 		map.put("e", "Egg");
 		
+		
+		//キーを繰り返し処理
+		//Mapのキーを全て出力
 		Iterator<String> it = map.keySet(). iterator();
 		while(it.hasNext()) {
 			String key = it.next();
