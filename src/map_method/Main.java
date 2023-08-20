@@ -57,7 +57,14 @@ public class Main {
 		
 		//remove(key)メソッド
 		//Mapから値を削除
-		map.remove("a");
+//		map.remove("a");
+//		System.out.println(map);
+		
+		
+		//remove(key, value)メソッド
+		//Mapからキーに対応する値が指定の値の場合のみ削除
+		map.remove("a", "Almond");
+		map.remove("b", "Banana");
 		System.out.println(map);
 	}
 }
