@@ -15,7 +15,12 @@ public class Main {
 		
 		
 		//Collections.unmodifiableMapを使用して変更不可のListを取得
-		Map<String, String> map2 = Collections.unmodifiableMap(map);
-		map2.put("f", "Fish");
+//		Map<String, String> map2 = Collections.unmodifiableMap(map);
+//		map2.put("f", "Fish");
+		
+		
+		//Collections.synchronizedMapを使用して同期化されたMapを取得
+		Map<String, String> map2 = Collections.synchronizedMap(map);
+		System.out.println(map2);
 	}
 }
