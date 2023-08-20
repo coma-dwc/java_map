@@ -18,7 +18,12 @@ public class Main {
 		
 		//getOrDefaultメソッド
 		//キーに対応する値がない場合のデフォルト値を指定してMapから値を取得
-		System.out.println(map.getOrDefault("a", "Anime"));
-		System.out.println(map.getOrDefault("c", "Cartoon"));
+//		System.out.println(map.getOrDefault("a", "Anime"));
+//		System.out.println(map.getOrDefault("c", "Cartoon"));
+		
+		
+		//sizeメソッド
+		//Mapに登録されているキーと値のペアの数を取得
+		System.out.println(map.size());
 	}
 }
